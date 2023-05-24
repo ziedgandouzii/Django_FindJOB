@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- HOME -->
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/hero_1.jpg' %}');"
+  id="home-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1 class="text-white font-weight-bold">About</h1>
+        <div class="custom-breadcrumbs">
+          <a href="{% url 'jobapp:home' %}">Home</a> <span class="mx-2 slash">/</span>
+          <span class="text-white"><strong>About</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ajax_listing_paginattion" class="site-section services-section bg-light block__62849" id="next-section">
+  <div class="container">
+
+    <div class="row">
+        <div class="col-md-7 col-sm-6">
+            <div class="about-title clearfix">
+                <h1>About <span>JOBFIND</span></h1>
+                <h4>Enhance Your Job Search with our Job Portal Website </h4>
+                <p class="about-paddingB">Welcome to our website, where we are committed to revolutionizing the way job seekers and employers connect. Our mission is to bridge the gap between talented individuals and exciting job opportunities, making the job search process seamless and efficient. With our user-friendly platform and innovative features, we aim to empower job seekers to find their dream jobs and assist employers in finding the perfect candidates to drive their organizations forward.</p>
+                <p>At FINDJOB, we are a passionate team of professionals dedicated to transforming the job market. We understand the challenges faced by both job seekers and employers, and our goal is to create a platform that caters to their unique needs. With years of experience in the industry, we have gained valuable insights and expertise that enable us to offer a comprehensive solution for all your job search and recruitment requirements.</p>
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-6">
+            <div class="about-img">
+                <img src="https://devitems.com/preview/appmom/img/mobile/2.png" alt="">
+            </div>
+        </div>	
+    </div>
+    {% include 'jobapp/paginator.html' %}
+
+  </div>
+</section>
+
+{% endblock content %}
